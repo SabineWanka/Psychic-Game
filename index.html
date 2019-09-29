@@ -8,6 +8,47 @@
 
 <body>
 
-    <h1>Open the console to see the magic!</h1>
+    <h1>The Psychic Game</h1>
 
-    <script>
+    <script type="text/javascript" src="../assets/javascript/game.js">
+
+        var (options) = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z];
+        var (wins) = 0;
+        var (losses) = 0
+
+        document.onkeyup = function () {
+            var userGuess = String.fromCharCode(event.keyCode).
+                toLowerCase();
+            console.log(userGuess)
+
+            var (computerGuess) = options[Math.floor(Math.random() * option.lenght)]; {
+
+                console.log(computerGuess);
+            }
+
+            if (userGuess === computerGuess) {
+                wins++
+                alert("wins" + wins)
+
+            }
+
+
+            else if () {
+                losses++
+                alert("losses" + losses)
+            }
+
+
+            < div id="game" >
+                <p>Guess what letter I'm thinking of</p>
+            </div >
+
+            var html = "<p>Guess what letter I'm thinking of</p>" +
+                "<p>wins: " + wins + "<p>" +
+                "<p>losses: " + losses + "<p>"
+
+            document.querySelector("#game").innerHTML = html;
+
+
+    </script>
+</body>
