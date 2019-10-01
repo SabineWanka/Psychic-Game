@@ -4,13 +4,14 @@ var losses = 0;
 var guesses = 0;
 
 document.onkeyup = function (event) {
-    var userGuess = String.fromCharCode(event.keyCode).
-        toLowerCase();
+    console.log(event);
+    var userGuess = event.key.toLowerCase();
     console.log(userGuess)
 
     var computerGuess = options[Math.floor(Math.random() * options.length)];
 
     console.log(computerGuess);
+    guesses++;
 
 
     if (userGuess === computerGuess) {
@@ -29,7 +30,7 @@ document.onkeyup = function (event) {
     var html = "<p>Guess what letter I'm thinking of</p>" +
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" +
-        "<p> Guesses left: " - guesses - "</p>" +
+        "<p> Guesses left: " + (10 - guesses) + "</p>" +
         "<p> Your Guesses so far: " + guesses + "</p>"
 
 
